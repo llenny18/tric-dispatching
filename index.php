@@ -25,42 +25,7 @@
             <div class="ovrllay">
            
                <!-- Header_Area -->
-               <nav class="navbar navbar-default header_aera affix-top">
-                  <div class="container m-s">
-                     <!-- Brand and toggle get grouped for better mobile display -->
-                     <div class="col-md-4 p0">
-                        <div class="navbar-header">
-                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
-                           <span class="sr-only">Toggle navigation</span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                           </button>
-                           <a class="navbar-brand logo-biss" href="index.php"> <img style="width: 200px;" src="assets/images/logo_img.png"></a>
-                        </div>
-                     </div>
-                     <!-- Collect the nav links, forms, and other content for toggling -->
-                     <div class="col-md-8 p0">
-                        <div class="collapse navbar-collapse" id="min_navbar">
-                          <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown submenu">
-                           <a href="index.php" class="">Home</a>
-                        </li>
-                         <li class="dropdown submenu">
-                           <a href="about.php" class="">About Us</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="services.php" class=""> Services</a>
-                        </li>
-                       
-                      
-                     </ul>
-                        </div>
-                        <!-- /.navbar-collapse -->
-                     </div>
-                  </div>
-                  <!-- /.container -->
-               </nav>
+               <?php include("./nav.php"); ?>
                <!-- End Header_Area -->
                <!-- #banner start -->
                <section id="banner" class=" mb-90">
@@ -71,8 +36,8 @@
                            <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s" >Welcome to Tricycle Online Dispatching App</h5>
                            <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">Experience seamless rides and swift dispatching like never before with the Tricycle Online Dispatching website app!</p>
                            <div class="top-banner wow fadeInRight">
-                           <a id="#services"  href="contact.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">Login as Passenger</a>
-                           <a id="#services"  href="contact.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">Login as Rider</a>
+                           <a id="#services"  href="contact.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">I am a Passenger</a>
+                           <a id="#services"  href="contact.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">I am a Rider</a>
                            </div>
                         </div>
                         <!-- /#banner-text End -->
@@ -82,24 +47,7 @@
             </div>
             </div>
       
-         <!-- /#banner end -->
-        
-         <!--#Our Partners Area -->
-         <div class="our_partners_area py-70 pt_banner_30">
-            <div class="container">
-              
-               <!--#Our Partners assets/images start -->
-               <div class="partners wow fadeInUp">
-                  <div class="item"><img src="assets/images/client_logo/client_logo-1.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-2.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-3.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-4.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-5.png" alt=""></div>
-               </div>
-               <!--#End Our Partners assets/images -->
-              
-            </div>
-         </div>
+         
       </div>
       <!--#End Our Partners Area -->
       <!-- #About Us Area start -->

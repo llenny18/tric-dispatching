@@ -27,50 +27,7 @@
            <div class="ovrllay">
            
          <!-- Header_Area -->
-         <nav class="navbar navbar-default header_aera affix-top pb-0" >
-            <div class="container m-s">
-               <!-- Brand and toggle get grouped for better mobile display -->
-               <div class="col-md-4 p0">
-                  <div class="navbar-header">
-                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
-                     <span class="sr-only">Toggle navigation</span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     </button>
-                     <a class="navbar-brand logo-biss" href="index.php"> <img src="assets/images/logo_img.png">
-                     </a>
-                  </div>
-               </div>
-               <!-- Collect the nav links, forms, and other content for toggling -->
-               <div class="col-md-8 p0">
-                  <div class="collapse navbar-collapse" id="min_navbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown submenu">
-                           <a href="index.php" class="">Home</a>
-                        </li>
-                         <li class="dropdown submenu">
-                           <a href="about.php" class="">About</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="services.php" class=""> Services</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="blog.php" class="">Blog</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="elements.php" class="">Elements</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="contact.php" class="">Contact</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <!-- /.navbar-collapse -->
-               </div>
-            </div>
-            <!-- /.container -->
-         </nav>
+         <?php include("./nav.php"); ?>
          <!-- End Header_Area -->
          <!-- #banner start -->
          <section id="banner" class="pt-0">
@@ -78,8 +35,8 @@
                <div class="row wow fadeInUp">
                   <!-- #banner-text start -->            
                   <div id="banner-text" class="col-md-12 text-c text-center ">
-                     <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s" >Contact</h5>
-                     <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">No hours sank into aggregating and cleaning data. No complex SQL queries required. Just the answers <br> teams need to make smarter decisions, fast. Now, that's data-driven.</p>
+                     <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s" >Register as Rider</h5>
+                
                   </div>
                   <!-- /#banner-text End -->
                </div>
@@ -94,7 +51,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading left">
-                    <h4>Let's Talk about Your Business</h4></div>
+                    <h4>Input Your Personal Information</h4></div>
                 <div class="contact-form-box margin-30px-top">
                     <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
                     <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
@@ -111,16 +68,30 @@
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Confirm Password" required="required" id="subject" name="subject">
                             </div>
-                            <div class="col-md-12">
-                                <select class="medium-textarea" rows="12" maxlength="1000" placeholder="Message *" required="required" id="message" name="message">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <input type="email" class="medium-input" maxlength="70" placeholder="Name" required="required" id="email" name="email">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Address" required="required" id="subject" name="subject">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <input type="email" class="medium-input" maxlength="70" placeholder="Contact Number" required="required" id="email" name="email">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="message" name="message">
 
-                                <option value="Rider">Rider</option>
-                                <option value="Passenger">Passenger</option>
-                                </select>
+<option value="">Select Gender</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Prefer Not Say">Prefer Not Say</option>
+</select>
+                            </div>
+                            <div class="col-md-12">
+                               
                             </div>
                             <div class="col-md-12 sm-margin-30px-bottom">
                                 <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Send Message</a>
+                           <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Register</a>
                         </div>
                             </div>
                         </div>
@@ -131,67 +102,7 @@
         </div>
     </div>
 </section>
-   <!-- #contact  Area End -->
-
-
-
- <!--#Our maps  start -->
-<section class="py_map_40">
-   <div class="container-fluid p0">
-      <div id="contatti" class=" maps">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                     </div>
-   </div>
-</section>
-
-  <!--#End maps   -->
-
-
-   <!--#Our Partners start -->
-<div class="our_partners_area py-45">
-            <div class="container">
-              
-               <!--#Our Partners assets/images start -->
-               <div class="partners  pt-0 p0wow fadeInUp">
-                  <div class="item"><img src="assets/images/client_logo/client_logo-1.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-2.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-3.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-4.png" alt=""></div>
-                  <div class="item"><img src="assets/images/client_logo/client_logo-5.png" alt=""></div>
-               </div>
-               <!--#End Our Partners assets/images -->
-              
-            </div>
-         </div>
-      <!--#End Our Partners Area -->
-
-
-      <!--#End contact-text  --> 
-       <!--#start Our testimonial Area -->
-    <div class="our_partners_area bg-grediunt">
-         <div class="book_now_aera ">
-            <div class="container">
-               <div class="row book_now">
-                  <div class="col-md-5 booking_text">
-                     <h4>Full insight into the customer journey.<br>
-                        No SQL required.
-                     </h4>
-                     <p>Get started for free to see who your customers are, what they do and what keeps them coming back.</p>
-                  </div>
-                  <div class="col-md-7 p0 book_bottun">
-                     <div class="col-md-7">
-                        
-                     </div>
-                     <div class="col-md-5">
-                        <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <a id="#services" href="contact.php" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+ 
          <!--#End Our testimonial Area -->
       <!--#start Our footer Area -->
       <div class="our_footer_area">
