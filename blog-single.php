@@ -36,7 +36,7 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                      </button>
-                     <a class="navbar-brand logo-biss" href="index.html"><img src="assets/images/logo_img.png"></a>
+                     <a class="navbar-brand logo-biss" href="index.php"><img src="assets/images/logo_img.png"></a>
                   </div>
                </div>
                <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,22 +44,22 @@
                   <div class="collapse navbar-collapse" id="min_navbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown submenu">
-                           <a href="index.html" class="">Home</a>
+                           <a href="index.php" class="">Home</a>
                         </li>
                          <li class="dropdown submenu">
-                           <a href="about.html" class="">About</a>
+                           <a href="about.php" class="">About</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="services.html" class=""> Services</a>
+                           <a href="services.php" class=""> Services</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="blog.html" class="">Blog</a>
+                           <a href="blog.php" class="">Blog</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="elements.html" class="">Elements</a>
+                           <a href="elements.php" class="">Elements</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="contact.html" class="">Contact</a>
+                           <a href="contact.php" class="">Contact</a>
                         </li>
                      </ul>
                   </div>
@@ -295,7 +295,7 @@
                                             <img src="assets/images/post/1.jpg" alt="">
                                         </div>
                                         <div class="post-info">
-                                            <a href="blog-post.html">Adipisicing dolor sit amet consectetur  elit Lorem ipsum dolor</a>
+                                            <a href="blog-post.php">Adipisicing dolor sit amet consectetur  elit Lorem ipsum dolor</a>
                                             <p>20/08/2017</p>
                                         </div>
                                     </li>
@@ -304,7 +304,7 @@
                                             <img src="assets/images/post/2.jpg" alt="">
                                         </div>
                                         <div class="post-info">
-                                            <a href="blog-post.html">Sit Lorem ipsum dolor amet adipisicing elit Lorem ipsum dolor</a>
+                                            <a href="blog-post.php">Sit Lorem ipsum dolor amet adipisicing elit Lorem ipsum dolor</a>
                                             <p>25/08/2017</p>
                                         </div>
                                     </li>
@@ -313,7 +313,7 @@
                                             <img src="assets/images/post/3.jpg" alt="">
                                         </div>
                                         <div class="post-info">
-                                            <a href="blog-post.html">Dolor sit amet consectetur adipisicing elit Lorem ipsum dolor</a>
+                                            <a href="blog-post.php">Dolor sit amet consectetur adipisicing elit Lorem ipsum dolor</a>
                                             <p>30/09/2017</p>
                                         </div>
                                     </li>
@@ -372,7 +372,7 @@
                      </div>
                      <div class="col-md-5">
                         <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <a id="#services" href="contact.html" class="btn btn-primary  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
+                           <a id="#services" href="contact.php" class="btn btn-primary  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
                         </div>
                      </div>
                   </div>
@@ -387,7 +387,7 @@
                <div class="row book_now">
                   <div class="col-md-4">
                      <div class="">
-                        <a class=" logo-biss" href="index.html"> <img src="assets/images/logo_img.png"></a>
+                        <a class=" logo-biss" href="index.php"> <img src="assets/images/logo_img.png"></a>
                      </div>
                      <p class="footer-h">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                      <div class="bigpixi-footer-social">

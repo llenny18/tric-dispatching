@@ -36,7 +36,7 @@
                            <span class="icon-bar"></span>
                            <span class="icon-bar"></span>
                            </button>
-                           <a class="navbar-brand logo-biss" href="index.html"> <img src="assets/images/logo_img.png"></a>
+                           <a class="navbar-brand logo-biss" href="index.php"> <img style="width: 200px;" src="assets/images/logo_img.png"></a>
                         </div>
                      </div>
                      <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,23 +44,15 @@
                         <div class="collapse navbar-collapse" id="min_navbar">
                           <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown submenu">
-                           <a href="index.html" class="">Home</a>
+                           <a href="index.php" class="">Home</a>
                         </li>
                          <li class="dropdown submenu">
-                           <a href="about.html" class="">About</a>
+                           <a href="about.php" class="">About Us</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="services.html" class=""> Services</a>
+                           <a href="services.php" class=""> Services</a>
                         </li>
-                        <li class="dropdown submenu">
-                           <a href="blog.html" class="">Blog</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="elements.html" class="">Elements</a>
-                        </li>
-                        <li class="dropdown submenu">
-                           <a href="contact.html" class="">Contact</a>
-                        </li>
+                       
                       
                      </ul>
                         </div>
@@ -76,10 +68,11 @@
                      <div class="row">
                         <!-- #banner-text start -->            
                         <div id="banner-text" class="col-md-12 text-c text-center ">
-                           <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s" >End-to-End Customer Journey Analytics</h5>
-                           <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">No hours sank into aggregating and cleaning data. No complex SQL queries required. Just the answers <br> teams need to make smarter decisions, fast. Now, that's data-driven.</p>
+                           <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s" >Welcome to Tricycle Online Dispatching App</h5>
+                           <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">Experience seamless rides and swift dispatching like never before with the Tricycle Online Dispatching website app!</p>
                            <div class="top-banner wow fadeInRight">
-                              <a id="#services"  href="contact.html" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">GeT STARTED FOR FREE</a>
+                           <a id="#services"  href="contact.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">Login as Passenger</a>
+                           <a id="#services"  href="contact.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">Login as Rider</a>
                            </div>
                         </div>
                         <!-- /#banner-text End -->
@@ -356,7 +349,7 @@
                      </div>
                      <div class="col-md-5">
                         <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <a id="#services" href="contact.html" class="btn btn-primary  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
+                           <a id="#services" href="contact.php" class="btn btn-primary  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
                         </div>
                      </div>
                   </div>
@@ -371,7 +364,7 @@
                <div class="row book_now">
                   <div class="col-md-4">
                      <div class="">
-                        <a class=" logo-biss" href="index.html"> <img src="assets/images/logo_img.png"></a>
+                        <a class=" logo-biss" href="index.php"> <img src="assets/images/logo_img.png"></a>
                      </div>
                      <p class="footer-h">It is a long established fact that a btn btn-defaulter will be distracted by the btn btn-defaultable content of a page when looking at its layout.</p>
                      <div class="bigpixi-footer-social">
