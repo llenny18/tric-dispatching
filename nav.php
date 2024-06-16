@@ -23,7 +23,10 @@
                            <a href="about.php" class="">About Us</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="services.php" class=""> Services</a>
+                           <a href="r-login.php" class=""> Login as Rider</a>
+                        </li>
+                        <li class="dropdown submenu">
+                           <a href="p-login.php" class=""> Login as Passenger</a>
                         </li>
                        
                       
