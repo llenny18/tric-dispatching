@@ -1,3 +1,4 @@
+<?php include("conn.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Passenger Login</title>
+   <title>Rider Login</title>
    <!-- Favicon -->
    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
    <!-- Bootstrap CSS -->
@@ -53,7 +54,7 @@
             <div class="row">
                <div class="col-lg-12">
                   <div class="section-heading left">
-                     <h4>Input Your Credentials</h4>
+                     <h4>Input Credentials</h4>
                   </div>
                   <div class="contact-form-box margin-30px-top">
                      <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
@@ -70,7 +71,7 @@
                               <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
                                  <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger m-5" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Login</a>
                               
-                                 <a type="submit" id="#services" href="p-register.php" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">No Account? Register Now!</a>
+                                 <a type="submit" id="#services" href="r-register.php" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">No Account? Register Now!</a>
                               </div>
                            </div>
                         </div>
@@ -84,7 +85,7 @@
 
       <!--#End Our testimonial Area -->
       <!--#start Our footer Area -->
-      <?php include("./footer.php") ?>
+       <?php include("./footer.php") ?>
       <!--#End Our footer Area -->
       <!-- jQuery JS -->
       <script src="assets/js/jquery-1.12.0.min.js"></script>
