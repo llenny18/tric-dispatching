@@ -22,6 +22,11 @@
    <!--Template Styles CSS-->
    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+   
 </head>
 
 <body>
@@ -54,28 +59,42 @@
             <div class="row">
                <div class="col-lg-12">
                   <div class="section-heading left">
-                     <h4>Input Credentials</h4>
+                     <h4>Bookings List</h4>
                   </div>
                   <div class="contact-form-box margin-30px-top">
                      <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
-                     <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
-                        <div class="row">
-                           <div class="col-xs-12 col-sm-6 col-md-6">
-                              <input type="email" class="medium-input" maxlength="70" placeholder="Username" required="required" id="email" name="email">
-                           </div>
-                           <div class="col-xs-12 col-sm-6 col-md-6">
-                              <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="subject" name="subject">
-                           </div>
-                          
-                           <div class="col-md-12 sm-margin-30px-bottom">
-                              <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                                 <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger m-5" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Login</a>
-                              
-                                 <a type="submit" id="#services" href="r-register.php" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">No Account? Register Now!</a>
-                              </div>
-                           </div>
-                        </div>
-                     </form>
+                     
+                     <table id="dataTable3" class="display" >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
                   </div>
                </div>
 
@@ -99,6 +118,24 @@
 
       <!-- Theme JS -->
       <script src="assets/js/theme.min.js"></script>
+
+    
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <script>
+      if ($('#dataTable3').length) {
+        $('#dataTable3').DataTable({
+            responsive: true
+        });
+    }
+    </script>
+   
 </body>
 
 </html>
