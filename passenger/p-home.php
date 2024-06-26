@@ -39,8 +39,8 @@
                         <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Hello User: </h5>
                         <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">Feel free to book reservations now</p>
                         <div class="top-banner wow fadeInRight">
-                           <a id="#services" href="p-login.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">User Profile</a>
-                           <a id="#services" href="r-login.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">Book Now!</a>
+                           <a id="#services" href="p-profile.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">User Profile</a>
+                           <a id="#services" href="p-book.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">Book Now!</a>
                         </div>
                      </div>
                      <!-- /#banner-text End -->
@@ -56,11 +56,7 @@
    <!-- #About Us Area start -->
    <div id="about" class="back-right-text-c">
    <div class="container">
-      <div class="row text-center mb-60">
-         <div class="title wow fadeInUp">
-            <h1>Comprehensive Solutions for Online Tricycle Dispatching</h1>
-         </div>
-      </div>
+      
       <div class="row about_row py-40">
          <!--#about-text start -->
          <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
@@ -68,11 +64,9 @@
                <div class="servise-top wow fadeInUp">
                   <img src="assets/images/icone-1.png">
                </div>
-               <h2 class="unify"> Book </h2>
-               <p class="bottom-s">Easily book a tricycle ride with just a few clicks. Our platform ensures quick and reliable service.</p>
-               <div class="button-div">
-                  <a href="" class="button-s"> Learn more </a>
-               </div>
+               <h2 class="unify">Deactivate Account</h2>
+               <p class="bottom-s">Deactivate your account and void all bookings.</p>
+               
             </div>
          </div>
          <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
@@ -80,11 +74,9 @@
                <div class="servise-top wow fadeInUp">
                   <img src="assets/images/icone-2.png">
                </div>
-               <h2 class="unify"> Track </h2>
-               <p class="bottom-s">Track your tricycle in real-time from dispatch to arrival. Stay informed every step of the way.</p>
-               <div class="button-div">
-                  <a href="" class="button-s"> Learn more </a>
-               </div>
+               <h2 class="unify"> Change Password </h2>
+               <p class="bottom-s">Change your password now.</p>
+               
             </div>
          </div>
          <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
@@ -92,11 +84,9 @@
                <div class="servise-top wow fadeInUp">
                   <img src="assets/images/icone-3.png">
                </div>
-               <h2 class="unify"> Optimize </h2>
-               <p class="bottom-s">Optimize routes and manage rides efficiently with our advanced analytics tools. Ensure timely and cost-effective service.</p>
-               <div class="button-div">
-                  <a href="" class="button-s"> Learn more </a>
-               </div>
+               <h2 class="unify"> My Bookings </h2>
+               <p class="bottom-s">View your bookings from current to past transactions.</p>
+               
             </div>
          </div>
          <!--#End about-text  -->

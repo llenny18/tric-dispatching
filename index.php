@@ -39,8 +39,8 @@
                         <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Welcome to Tricycle Online Dispatching App</h5>
                         <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">Experience seamless rides and swift dispatching like never before with the Tricycle Online Dispatching website app!</p>
                         <div class="top-banner wow fadeInRight">
-                           <a id="#services" href="p-login.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">I am a Passenger</a>
-                           <a id="#services" href="r-login.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">I am a Rider</a>
+                           <a id="#services" href="passenger/p-login.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">I am a Passenger</a>
+                           <a id="#services" href="rider/r-login.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">I am a Rider</a>
                         </div>
                      </div>
                      <!-- /#banner-text End -->
