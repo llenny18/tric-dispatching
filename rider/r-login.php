@@ -24,6 +24,38 @@
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 </head>
 
+<button?php
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   $username = $_POST['email'];
+   $password = $_POST['subject'];
+
+   // Check connection
+   if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+   }
+
+   $sql = "SELECT rider_id FROM riders WHERE rusername = ? AND rpassword = ?";
+   $stmt = $conn->prepare($sql);
+   $stmt->bind_param("ss", $username, $password);
+   $stmt->execute();
+   $stmt->store_result();
+
+   if ($stmt->num_rows > 0) {
+      $stmt->bind_result($rider_id);
+      $stmt->fetch();
+      $_SESSION['r_id'] = $rider_id;
+      $stmt->close();
+      $conn->close();
+      echo '<script>alert("Login successful! Redirecting to services page."); window.location.href = "r-home.php";</script>';
+   } else {
+      $stmt->close();
+      $conn->close();
+      echo '<script>alert("Invalid username or password. Please try again."); window.location.href = "login.php";</script>';
+   }
+}
+?>
 <body>
    <div class="bg-all">
       <div class="bg-banner-img clip-ellipse">
@@ -58,10 +90,10 @@
                   </div>
                   <div class="contact-form-box margin-30px-top">
                      <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
-                     <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
+                     <form id="contactForm" method="post" class="contact-form" >
                         <div class="row">
                            <div class="col-xs-12 col-sm-6 col-md-6">
-                              <input type="email" class="medium-input" maxlength="70" placeholder="Username" required="required" id="email" name="email">
+                              <input type="text" class="medium-input" maxlength="70" placeholder="Username" required="required" id="email" name="email">
                            </div>
                            <div class="col-xs-12 col-sm-6 col-md-6">
                               <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="subject" name="subject">
@@ -69,7 +101,7 @@
                           
                            <div class="col-md-12 sm-margin-30px-bottom">
                               <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                                 <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger m-5" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Login</a>
+                                 <button type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger m-5" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Login</button>
                               
                                  <a type="submit" id="#services" href="r-register.php" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">No Account? Register Now!</a>
                               </div>
