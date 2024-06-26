@@ -36,7 +36,7 @@
                   <div class="row">
                      <!-- #banner-text start -->
                      <div id="banner-text" class="col-md-12 text-c text-center ">
-                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Hello Rider: </h5>
+                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Hello Rider: <?= $row_r['name'] ?> </h5>
                         <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">here are all the Bookings you have now!</p>
                         <div class="top-banner wow fadeInRight">
                         

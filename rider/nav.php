@@ -42,8 +42,14 @@
 
                <?php
 
-if(isset($_SESSION["r_id"])){
-   echo '<script>alert("Login First! Redirecting to Login page."); window.location.href = "r-login.php";</script>';
+if(!isset($_SESSION["r_id"]) ){
+   if($_SERVER['REQUEST_URI'] != "/tric-dispatching/rider/r-login.php"){
+   echo '<script>alert("Login First! Redirecting to Login page ."); window.location.href = "r-login.php";</script>';}
+}
+else{
+   $sql = "SELECT * FROM riders where rider_id = {$_SESSION["r_id"]}";
+$result = $conn->query($sql);
+$row_r = $result->fetch_assoc();
 }
 
 ?>

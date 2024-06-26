@@ -1,3 +1,4 @@
+<?php include("conn.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -58,31 +59,44 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="name">Name</label>
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Username" required="required" id="name" name="name">
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Name" required="required" id="name" name="name" value="<?=$row_r['name'] ?>">
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="home">Home Address</label>
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Email" required="required" id="home" name="home">
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Home Address" required="required" id="home" name="home" value="<?=$row_r['address'] ?>">
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                <label for="work">Work Address</label>
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="work" name="work">
-                            </div>
+                            
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="uname">Username</label>
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Confirm Password" required="required" id="uname" name="uname">
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Username" required="required" id="uname" name="uname" value="<?=$row_r['rusername'] ?>">
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="pass">Password</label>
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Name" required="required" id="pass" name="pass">
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="pass" name="pass" value="<?=$row_r['rpassword'] ?>">
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="cnum">Contact Number</label>
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Address" required="required" id="cnum" name="cnum">
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Contact Mumber" required="required" id="cnum" name="cnum" value="<?=$row_r['contact'] ?>">
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" class="medium-input" maxlength="70" placeholder="Contact Number" required="required" id="email" name="email">
+                                <input type="email" class="medium-input" maxlength="70" placeholder="Email" required="required" id="email" name="email" value="<?=$row_r['email'] ?>">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="plate">Plate Number</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Plate Number" required="required" id="plate" name="plate" value="<?=$row_r['vehicle_number'] ?>">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="lc">License Number</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="License Number" required="required" id="lc" name="lc" value="<?=$row_r['license_number'] ?>">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="lv">License Issue Date</label>
+                                <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Date" required="required" id="lv" name="lv" value="<?=$row_r['license_issued_date'] ?>">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="lv2">License Issue Expiry</label>
+                                <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Expiry" required="required" id="lv2" name="lv2" value="<?=$row_r['license_expiry_date'] ?>">
                             </div>
                             
                             <div class="col-md-12 sm-margin-30px-bottom">

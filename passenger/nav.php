@@ -43,8 +43,15 @@
 
                <?php
 
-if(isset($_SESSION["p_id"])){
+if(!isset($_SESSION["p_id"])){
+   if($_SERVER['REQUEST_URI'] != "/tric-dispatching/passenger/p-login.php"){
    echo '<script>alert("Login First! Redirecting to Login page."); window.location.href = "p-login.php";</script>';
+   }
+}
+else{
+   $sql = "SELECT * FROM passengers  where passenger_id = {$_SESSION["p_id"]} ";
+$result = $conn->query($sql);
+$row_p = $result->fetch_assoc();
 }
 
 ?>

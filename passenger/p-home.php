@@ -36,7 +36,7 @@
                   <div class="row">
                      <!-- #banner-text start -->
                      <div id="banner-text" class="col-md-12 text-c text-center ">
-                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Hello User: </h5>
+                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Hello Passenger: <?= $row_p['name'] ?></h5>
                         <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">Feel free to book reservations now</p>
                         <div class="top-banner wow fadeInRight">
                            <a id="#services" href="p-profile.php" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">User Profile</a>
