@@ -20,13 +20,13 @@
                            <a href="index.php" class="">Home</a>
                         </li>
                          <li class="dropdown submenu">
-                           <a href="about.php" class="">Book</a>
+                           <a href="p-book.php" class="">Book</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="r-login.php" class=""> Profile</a>
+                           <a href="p-profile.php" class=""> Profile</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="p-login.php" class=""> Logout</a>
+                           <a href="p-logout.php" class=""> Logout</a>
                         </li>
                        
                       
