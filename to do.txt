@@ -1,0 +1,17 @@
+Passenger Side:
+    - Create Bookings work
+    - Profile change data
+    - Register
+    - Logout
+
+
+
+
+Rider Side:
+    - Accept Bookings work
+    - Payment recieve in bookings
+    - Profile change data
+    - Register
+    - Logout
+
+

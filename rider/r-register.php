@@ -22,6 +22,45 @@
       <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
    </head>
+
+   <?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+   
+    // Prepare SQL statement
+    $sql = "INSERT INTO riders (name, address, rusername, rpassword, contact, email, vehicle_number, license_number, license_issued_date, license_expiry_date)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    // Prepare and bind parameters
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssssssss", $name, $address, $rusername, $rpassword, $contact, $email, $vehicle_number, $license_number, $license_issued_date, $license_expiry_date);
+
+    // Set parameters from POST data
+    $name = $_POST['name'];
+    $address = $_POST['home'];
+    $rusername = $_POST['uname'];
+    $rpassword = $_POST['pass'];
+    $contact = $_POST['cnum'];
+    $email = $_POST['email'];
+    $vehicle_number = $_POST['plate'];
+    $license_number = $_POST['lc'];
+    $license_issued_date = $_POST['lv'];
+    $license_expiry_date = $_POST['lv2'];
+
+    // Execute the prepared statement
+    if ($stmt->execute()) {
+        echo '<script>alert("Register successful! Redirecting to login page."); window.location.href = "r-login.php";</script>';
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close statement and connection
+    $stmt->close();
+}
+?>
+
+
    <body>
       <div class="bg-all">
       <div class="bg-banner-img clip-ellipse">
@@ -52,47 +91,56 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading left">
-                    <h4>Input Your Personal Information</h4></div>
+                    <h4>Register Now</h4></div>
                 <div class="contact-form-box margin-30px-top">
                     <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
-                    <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
+                    <form id="contactForm" method="post" class="contact-form">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="email" class="medium-input" maxlength="70" placeholder="Username" required="required" id="email" name="email">
+                                <label for="name">Name</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Name" required="required" id="name" name="name" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Email" required="required" id="subject" name="subject">
+                                <label for="home">Home Address</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Home Address" required="required" id="home" name="home" >
+                            </div>
+                            
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="uname">Username</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Username" required="required" id="uname" name="uname" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="email" class="medium-input" maxlength="70" placeholder="Password" required="required" id="email" name="email">
+                                <label for="pass">Password</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="pass" name="pass" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Confirm Password" required="required" id="subject" name="subject">
+                                <label for="cnum">Contact Number</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Contact Mumber" required="required" id="cnum" name="cnum" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="email" class="medium-input" maxlength="70" placeholder="Name" required="required" id="email" name="email">
+                                <label for="email">Email</label>
+                                <input type="email" class="medium-input" maxlength="70" placeholder="Email" required="required" id="email" name="email" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="text" class="medium-input" maxlength="70" placeholder="Address" required="required" id="subject" name="subject">
+                                <label for="plate">Plate Number</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="Plate Number" required="required" id="plate" name="plate" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <input type="email" class="medium-input" maxlength="70" placeholder="Contact Number" required="required" id="email" name="email">
+                                <label for="lc">License Number</label>
+                                <input type="text" class="medium-input" maxlength="70" placeholder="License Number" required="required" id="lc" name="lc" >
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                            <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="message" name="message">
-
-<option value="">Select Gender</option>
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-<option value="Prefer Not Say">Prefer Not Say</option>
-</select>
+                                <label for="lv">License Issue Date</label>
+                                <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Date" required="required" id="lv" name="lv" >
                             </div>
-                            <div class="col-md-12">
-                               
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="lv2">License Issue Expiry</label>
+                                <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Expiry" required="required" id="lv2" name="lv2" >
                             </div>
+                            
                             <div class="col-md-12 sm-margin-30px-bottom">
                                 <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Register</a>
+                           <button type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Save</button>
                         </div>
                             </div>
                         </div>
