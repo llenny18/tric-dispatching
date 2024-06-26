@@ -22,6 +22,46 @@
       <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
    </head>
+
+   <?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+   
+    // Prepare SQL statement
+    $sql = "UPDATE riders 
+            SET name=?, rusername=?, address=?,rpassword=?, contact=?, email=?, vehicle_number=?, license_number=?, license_issued_date=?, license_expiry_date=?
+            WHERE rusername=?";
+
+    // Prepare and bind parameters
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssssssss", $name,$uname, $address, $rpassword, $contact, $email, $vehicle_number, $license_number, $license_issued_date, $license_expiry_date, $rusername);
+
+    // Set parameters from POST data
+    $name = $_POST['name'];
+    $uname = $_POST['uname'];
+    $address = $_POST['home'];
+    $rusername = $_POST['uname'];
+    $rpassword = $_POST['pass'];
+    $contact = $_POST['cnum'];
+    $email = $_POST['email'];
+    $vehicle_number = $_POST['plate'];
+    $license_number = $_POST['lc'];
+    $license_issued_date = $_POST['lv'];
+    $license_expiry_date = $_POST['lv2'];
+
+    // Execute the prepared statement
+    if ($stmt->execute()) {
+        echo '<script>alert("Update successful! Redirecting to Home page."); window.location.href = "r-home.php";</script>';
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close statement and connection
+    $stmt->close();
+}
+?>
+
    <body>
       <div class="bg-all">
       <div class="bg-banner-img clip-ellipse">
@@ -55,7 +95,7 @@
                     <h4>Your Personal Information</h4></div>
                 <div class="contact-form-box margin-30px-top">
                     <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
-                    <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
+                    <form id="contactForm" method="post" class="contact-form" >
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="name">Name</label>
@@ -101,7 +141,7 @@
                             
                             <div class="col-md-12 sm-margin-30px-bottom">
                                 <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <buttom type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Save</button>
+                           <button type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Save</button>
                         </div>
                             </div>
                         </div>

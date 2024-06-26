@@ -22,7 +22,36 @@
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 </head>
+<?php
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect data from the form
+    $pusername = $_POST['uname'];
+    $ppassword = $_POST['pass'];
+    $name = $_POST['name'];
+    $home_address = $_POST['home'];
+    $work_address = $_POST['work'];
+    $contact = $_POST['cnum'];
+    $email = $_POST['email'];
+    $gender = $_POST['gender'];
+
+    // Prepare and bind
+    $stmt = $conn->prepare("UPDATE passengers SET name=?, home_address=?, work_address=?, ppassword=?, contact=?, email=?, gender=?, pusername=? WHERE pusername=?");
+    $stmt->bind_param("sssssssss", $name, $home_address, $work_address, $ppassword, $contact, $email, $gender, $pusername, $pusername);
+
+    // Execute the query
+    if ($stmt->execute()) {
+        echo '<script>alert("Update successful!"); window.location.href = "p-home.php";</script>';
+    } else {
+        echo "Error updating record: " . $stmt->error;
+    }
+
+    // Close statement and connection
+    $stmt->close();
+}
+
+
+?>
 <body>
     <div class="bg-all">
         <div class="bg-banner-img clip-ellipse">
@@ -57,11 +86,11 @@
                         </div>
                         <div class="contact-form-box margin-30px-top">
                             <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
-                            <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
+                            <form id="contactForm" method="post" class="contact-form" >
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-6">
                                         <label for="uname">Username</label>
-                                        <input type="email" class="medium-input" placeholder="Username" value="<?= $row_p['pusername'] ?>" required id="uname" name="uname">
+                                        <input type="text" class="medium-input" placeholder="Username" value="<?= $row_p['pusername'] ?>" required id="uname" name="uname">
                                     </div>
                                     <div class="col-xs-12 col-sm-6 col-md-6">
                                         <label for="pass">Password</label>
