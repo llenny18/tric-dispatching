@@ -101,7 +101,7 @@
                             
                             <div class="col-md-12 sm-margin-30px-bottom">
                                 <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                           <a type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Register</a>
+                           <buttom type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">Save</button>
                         </div>
                             </div>
                         </div>
