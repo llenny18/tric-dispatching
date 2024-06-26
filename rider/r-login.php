@@ -24,7 +24,7 @@
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 </head>
 
-<button?php
+<?php
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

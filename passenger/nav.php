@@ -37,3 +37,14 @@
                   </div>
                   <!-- /.container -->
                </nav>
+
+               
+
+
+               <?php
+
+if(isset($_SESSION["p_id"])){
+   echo '<script>alert("Login First! Redirecting to Login page."); window.location.href = "p-login.php";</script>';
+}
+
+?>
