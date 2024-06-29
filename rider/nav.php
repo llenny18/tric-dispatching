@@ -22,12 +22,14 @@
                          <li class="dropdown submenu">
                            <a href="r-list.php" class="">Bookings</a>
                         </li>
+                        <?php if(isset($_SESSION["r_id"])){ ?>
                         <li class="dropdown submenu">
                            <a href="r-profile.php" class=""> Profile</a>
                         </li>
                         <li class="dropdown submenu">
                            <a href="p-logout.php" class=""> Logout</a>
                         </li>
+                        <?php } ?>
                        
                       
                      </ul>

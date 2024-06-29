@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Passenger Register</title>
+<title>Passenger Profile</title>
 <!-- Favicon -->
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
 <!-- Bootstrap CSS -->
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="row wow fadeInUp">
                             <!-- #banner-text start -->
                             <div id="banner-text" class="col-md-12 text-c text-center ">
-                                <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Register as Passenger</h5>
+                                <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Manage your Imformation </h5>
 
                             </div>
                             <!-- /#banner-text End -->

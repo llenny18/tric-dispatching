@@ -23,10 +23,10 @@
                            <a href="about.php" class="">About Us</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="r-login.php" class=""> Login as Rider</a>
+                           <a href="rider/r-login.php" class=""> Login as Rider</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="p-login.php" class=""> Login as Passenger</a>
+                           <a href="passenger/p-login.php" class=""> Login as Passenger</a>
                         </li>
                        
                       

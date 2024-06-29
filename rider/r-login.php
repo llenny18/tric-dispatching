@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    } else {
       $stmt->close();
       $conn->close();
-      echo '<script>alert("Invalid username or password. Please try again."); window.location.href = "login.php";</script>';
+      echo '<script>alert("Invalid username or password. Please try again.");</script>';
    }
 }
 ?>

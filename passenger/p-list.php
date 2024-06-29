@@ -6,7 +6,7 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Rider Bookings List</title>
+   <title>Passenger Bookings List</title>
    <!-- Favicon -->
    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
    <!-- Bootstrap CSS -->
@@ -67,8 +67,8 @@
                      <table id="dataTable3" class="display" >
             <thead>
                 <tr>
-                    <th>Passenger</th>
-                    <th>Contact Details</th>
+                    <th>Rider</th>
+                    <th>Plate Number</th>
                     <th>Date and Time</th>
                     <th>Pickup and Destination</th>
                     <th>Fare</th>
@@ -77,13 +77,13 @@
             </thead>
             <tbody>
            <?php 
-             $sqlb = "SELECT * FROM desinations_view where rider_id = {$_SESSION['r_id']} ";
+             $sqlb = "SELECT * FROM desinations_view where passenger_id = {$_SESSION['p_id']} ";
              $resultb = $conn->query($sqlb);
            while ($books = $resultb->fetch_assoc()) {
                                             ?>
  <tr>
-                    <td><?= $books['passenger_name'] ?></td>
-                    <td><?= $books['p_contact']." - ".$books['p_email'];  ?></td>
+                    <td><?= $books['rider_name'].": ".$books['r_contact'] ?></td>
+                    <td><?= $books['vehicle_number'] ?></td>
                     <td><?php $dateString = $books['d_date'] . ' ' . $books['d_time'];
 $date = new DateTime($dateString);
 $formattedDate = $date->format('F j, Y \a\t g:i a');
@@ -103,7 +103,7 @@ echo $row_p1['location_name']." => ". $row_p2['location_name'];
                     
                     ?></td>
                     <td><?= $books['fare'] ?></td>
-                    <td><a href="" class="btn btn-primary">Accept</a><a href="" class="btn btn-danger">Reject</a><a href="" class="btn btn-success">Finished</a></td>
+                    <td><a href="" class="btn btn-success">Pay</a><a href="" class="btn btn-danger">Cancel</a></td>
                 </tr>
                                             <?php } ?>
                

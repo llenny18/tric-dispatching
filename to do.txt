@@ -8,7 +8,7 @@ Passenger Side:
 
 
 Rider Side:
-    - Accept Bookings work
+    - Accept Bookings workw
     - Payment recieve in bookings
     - Profile change data /
     - Register /
