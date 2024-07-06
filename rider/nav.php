@@ -27,7 +27,7 @@
                            <a href="r-profile.php" class=""> Profile</a>
                         </li>
                         <li class="dropdown submenu">
-                           <a href="p-logout.php" class=""> Logout</a>
+                           <a href="r-logout.php" class=""> Logout</a>
                         </li>
                         <?php } ?>
                        

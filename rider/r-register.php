@@ -96,44 +96,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
                     <form id="contactForm" method="post" class="contact-form">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="name">Name</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Name" required="required" id="name" name="name" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="home">Home Address</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Home Address" required="required" id="home" name="home" >
                             </div>
                             
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="uname">Username</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Username" required="required" id="uname" name="uname" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="pass">Password</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="pass" name="pass" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="cnum">Contact Number</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Contact Mumber" required="required" id="cnum" name="cnum" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="email">Email</label>
                                 <input type="email" class="medium-input" maxlength="70" placeholder="Email" required="required" id="email" name="email" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="plate">Plate Number</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="Plate Number" required="required" id="plate" name="plate" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="lc">License Number</label>
                                 <input type="text" class="medium-input" maxlength="70" placeholder="License Number" required="required" id="lc" name="lc" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="lv">License Issue Date</label>
                                 <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Date" required="required" id="lv" name="lv" >
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="  col-sm-6 col-md-6">
                                 <label for="lv2">License Issue Expiry</label>
                                 <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Expiry" required="required" id="lv2" name="lv2" >
                             </div>

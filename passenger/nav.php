@@ -21,11 +21,11 @@
                         </li>
                          <li class="dropdown submenu">
                            <a href="p-book.php" class="">Book</a>
-                        </li>
+                        </li> <?php if(isset($_SESSION["p_id"])){ ?>
                          <li class="dropdown submenu">
                            <a href="p-list.php" class="">Booking List</a>
                         </li>
-                        <?php if(isset($_SESSION["p_id"])){ ?>
+                       
                         <li class="dropdown submenu">
                            <a href="p-profile.php" class=""> Profile</a>
                         </li>

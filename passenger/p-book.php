@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="row wow fadeInUp">
                             <!-- #banner-text start -->
                             <div id="banner-text" class="col-md-12 text-c text-center ">
-                                <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Register as Passenger</h5>
+                                <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Book as Dispatch</h5>
                             </div>
                             <!-- /#banner-text End -->
                         </div>
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
                             <form id="contactForm" method="post" class="contact-form" >
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="col-sm-6 col-md-6">
                                         <label for="rider">Rider</label>
                                         <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="rider" name="rider">
                                             <option value="">Select Rider</option>
@@ -110,15 +110,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <?php } ?>
                                         </select>
                                     </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class=" col-sm-6 col-md-6">
                                         <label for="date">Date of Booking</label>
                                         <input type="date" class="medium-input" maxlength="70" placeholder="Date" required="required" id="date" name="date">
                                     </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="  col-sm-6 col-md-6">
                                         <label for="time">Time of Booking</label>
                                         <input type="time" class="medium-input" maxlength="70" placeholder="Time" required="required" id="time" name="time">
                                     </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="  col-sm-6 col-md-6">
                                         <label for="pickup">Pickup Location</label>
                                         <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="pickup" name="pickup">
                                             <option value="">Select Pickup Place</option>
@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <?php } ?>
                                         </select>
                                     </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="  col-sm-6 col-md-6">
                                         <label for="destination">Destination Location</label>
                                         <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="destination" name="destination">
                                             <option value="">Select Destination Place</option>
@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <?php } ?>
                                         </select>
                                     </div>
-                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="  col-sm-6 col-md-6">
                                         <label for="payment">Payment Method</label>
                                         <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="payment" name="payment">
                                             <option value="">Select Payment Method</option>
