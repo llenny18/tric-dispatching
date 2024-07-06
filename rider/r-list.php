@@ -29,6 +29,96 @@
    
 </head>
 
+<?php
+if(isset($_GET['pay_id']) || isset($_GET['acp_id']) || isset($_GET['rej_id']) || isset($_GET['fin_id']) ){
+
+   if(isset($_GET['pay_id']) ){
+      $dispatch_id = $_GET['pay_id']; // Replace with the actual dispatch_id
+
+      // Prepare the SQL statement
+      $sql = "UPDATE dispatches SET payment_status='paid' WHERE dispatch_id=?";
+      
+      // Prepare statement
+      $stmt = $conn->prepare($sql);
+      
+      // Bind the parameters
+      $stmt->bind_param("i", $dispatch_id);
+      
+      // Execute the statement
+      if ($stmt->execute()) {
+         echo '<script>alert("Payment Accepted! Redirecting to bookings page."); window.location.href = "r-list.php";</script>';
+      } else {
+         echo '<script>alert("Error in update.");</script>';
+      }
+   }
+   else if(isset($_GET['acp_id']) ){
+      $dispatch_id = $_GET['acp_id']; // Replace with the actual dispatch_id
+
+      // Prepare the SQL statement
+      $sql = "UPDATE dispatches SET `status`='accepted' WHERE dispatch_id=?";
+      
+      // Prepare statement
+      $stmt = $conn->prepare($sql);
+      
+      // Bind the parameters
+      $stmt->bind_param("i", $dispatch_id);
+      
+      // Execute the statement
+      if ($stmt->execute()) {
+         echo '<script>alert("Dispatch Accepted! Redirecting to bookings page."); window.location.href = "r-list.php";</script>';
+      } else {
+         echo '<script>alert("Error in update.");</script>';
+      }
+   }
+   else if(isset($_GET['rej_id']) ){
+      $dispatch_id = $_GET['rej_id']; // Replace with the actual dispatch_id
+
+      // Prepare the SQL statement
+      $sql = "UPDATE dispatches SET `status`='cancelled' WHERE dispatch_id=?";
+      
+      // Prepare statement
+      $stmt = $conn->prepare($sql);
+      
+      // Bind the parameters
+      $stmt->bind_param("i", $dispatch_id);
+      
+      // Execute the statement
+      if ($stmt->execute()) {
+         echo '<script>alert("Dispatch Rejected! Redirecting to bookings page."); window.location.href = "r-list.php";</script>';
+      } else {
+         echo '<script>alert("Error in update.");</script>';
+      }
+   }
+   else if(isset($_GET['fin_id']) ){
+      $dispatch_id = $_GET['fin_id']; // Replace with the actual dispatch_id
+
+      // Prepare the SQL statement
+      $sql = "UPDATE dispatches SET `status`='completed' WHERE dispatch_id=?";
+      
+      // Prepare statement
+      $stmt = $conn->prepare($sql);
+      
+      // Bind the parameters
+      $stmt->bind_param("i", $dispatch_id);
+      
+      // Execute the statement
+      if ($stmt->execute()) {
+         echo '<script>alert("Dispatch Finished Successfully! Redirecting to bookings page."); window.location.href = "r-list.php";</script>';
+      } else {
+         echo '<script>alert("Error in update.");</script>';
+      }
+   }
+
+
+}
+
+else{
+
+
+
+
+?>
+
 <body>
    <div class="bg-all">
       <div class="bg-banner-img clip-ellipse">
@@ -103,8 +193,25 @@ echo $row_p1['location_name']." => ". $row_p2['location_name'];
                     
                     ?></td>
                     <td><?= $books['fare'] ?></td>
-                    <td><a href="" class="btn btn-primary">Accept</a><a href="" class="btn btn-danger">Reject</a><a href="" class="btn btn-success">Finished</a></td>
-                </tr>
+                    <td>
+                     <?php if($books['status']=="pending" && $books['payment_status']!="paid"){ ?>
+                     <a href="r-list.php?pay_id=<?= $books['dis_id']; ?>" class="btn btn-primary">Payment Received</a>
+                     <?php } ?>
+                     <?php if($books['payment_status']=="paid" && $books['status']=="pending"){ ?>
+                     <a href="r-list.php?acp_id=<?= $books['dis_id']; ?>" class="btn btn-success">Accept Dispatch</a>
+                     <?php } ?>
+                     <?php if($books['status']=="pending"){ ?>
+                     <a href="r-list.php?rej_id=<?= $books['dis_id']; ?>" class="btn btn-danger">Reject Dispatch</a>
+                     <?php } ?>
+                     <?php if($books['status']=="accepted"){ ?>
+                     <a href="r-list.php?fin_id=<?= $books['dis_id']; ?>" class="btn btn-success">Passenger Dispatched</a>
+                    <?php }
+                    if($books['status']=="completed"){ ?>
+                     <h2 class="btn btn-success">Dispatch is Finished</h2>
+                 
+                     <?php } ?>
+                     </td>
+                    </tr>
                                             <?php } ?>
                
                 
@@ -154,4 +261,9 @@ echo $row_p1['location_name']." => ". $row_p2['location_name'];
    
 </body>
 
+<?php
+
+   }
+
+   ?>
 </html>

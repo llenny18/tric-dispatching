@@ -1,9 +1,9 @@
 Passenger Side:
-    - Create Bookings work
+    - Create Bookings work /
     - Profile change data / 
     - Register /
     - Logout /
-    - Pay and Cancel update query
+    - Pay and Cancel update query 
     - List filter the pending 
     - Pay with image blob
     - User Icon
@@ -12,7 +12,6 @@ Passenger Side:
 
 
 Rider Side:
-    - Accept Bookings work
     - Payment recieve in bookings
     - Profile change data /
     - Register /
