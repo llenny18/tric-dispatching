@@ -105,6 +105,32 @@ if(isset($_POST['pay_now'])){
 
 ?>
 
+
+
+<?php
+if(isset($_GET['can_id']) ){
+
+      $dispatch_id = $_GET['can_id']; // Replace with the actual dispatch_id
+
+      // Prepare the SQL statement
+      $sql = "UPDATE dispatches SET `status`='cancelled' WHERE dispatch_id=?";
+      
+      // Prepare statement
+      $stmt = $conn->prepare($sql);
+      
+      // Bind the parameters
+      $stmt->bind_param("i", $dispatch_id);
+      
+      // Execute the statement
+      if ($stmt->execute()) {
+         echo '<script>alert("Dispatch Successfully Cancelled! Redirecting to bookings page."); window.location.href = "p-list.php";</script>';
+      } else {
+         echo '<script>alert("Error in update.");</script>';
+      }
+
+    }
+    else{
+   ?>
 <body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -223,10 +249,22 @@ echo $row_p1['location_name']." => ". $row_p2['location_name'];
                     <td><?= $books['fare'] ?></td>
                     <td><?= $books['status'] ?></td>
                     <td>
+
+                    <?php if($books['status']=="pending"){ ?>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#imageModal<?= $books['dis_id'] ?>">
 Pay</button>
                     
-                    <a href="" class="btn btn-danger">Cancel</a></td>
+                    <a href="p-list.php?can_id=<?= $books['dis_id'] ?>" class="btn btn-danger">Cancel</a>
+                  
+                    <?php } else if($books['status']=="cancelled"){ ?>
+                      <h4 class="text-danger">The Dispatch is Cancelled</h4>
+                    <?php } else if($books['status']=="rejected"){ ?>
+                      <h4 class="text-danger">The Dispatch is Rejected</h4>
+                    <?php } else if($books['status']=="completed"){ ?>
+                      <h4 class="text-success">The Dispatch is Completed</h4>
+                    <?php } ?>
+                  
+                  </td>
                 </tr>
                                             <?php } ?>
                
@@ -277,4 +315,5 @@ Pay</button>
    
 </body>
 
+<?php   } ?>
 </html>

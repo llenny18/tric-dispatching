@@ -59,6 +59,7 @@
       
       <div class="row about_row py-40">
          <!--#about-text start -->
+         <a href="r-profile.php">
          <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
             <div class="service-1">
                <div class="servise-top wow fadeInUp">
@@ -69,6 +70,8 @@
                
             </div>
          </div>
+         </a>
+         <a href="r-transactions.php">
          <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
             <div class="service-1">
                <div class="servise-top wow fadeInUp">
@@ -79,15 +82,18 @@
                
             </div>
          </div>
+         </a>
+         <a href="r-list.php">
          <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
             <div class="service-1">
                <div class="servise-top wow fadeInUp">
                   <img src="assets/images/icone-3.png">
                </div>
-               <h2 class="unify">Contact Us</h2>
-               <p class="bottom-s">View our contact information for your concerns.</p>
+               <h2 class="unify">Active Booking List</h2>
+               <p class="bottom-s">View your bookings list now.</p>
             </div>
          </div>
+         </a>
          <!--#End about-text  -->
       </div>
    </div>

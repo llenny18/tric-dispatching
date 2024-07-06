@@ -3,21 +3,20 @@ Passenger Side:
     - Profile change data / 
     - Register /
     - Logout /
-    - Pay and Cancel update query 
-    - List filter the pending 
-    - Pay with image blob
+    - Pay and Cancel update query  /
+    - List filter the pending /
+    - Pay with image blob/
     - User Icon
 
 
 
 
 Rider Side:
-    - Payment recieve in bookings
     - Profile change data /
     - Register /
     - Logout /
-    - Payment received
-    - Accept, reject and finish update query
+    - Payment received/
+    - Accept, reject and finish update query/
     - User Icon
 
 

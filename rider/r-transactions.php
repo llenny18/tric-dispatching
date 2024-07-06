@@ -6,7 +6,7 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Rider Bookings List</title>
+   <title>Rider Transactions List</title>
    <!-- Favicon -->
    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
    <!-- Bootstrap CSS -->
@@ -133,7 +133,7 @@ else{
                   <div class="row wow fadeInUp">
                      <!-- #banner-text start -->
                      <div id="banner-text" class="col-md-12 text-c text-center ">
-                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Your Bookings</h5>
+                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">List of All Your Transactions</h5>
 
                      </div>
                      <!-- /#banner-text End -->
@@ -167,7 +167,7 @@ else{
             </thead>
             <tbody>
            <?php 
-             $sqlb = "SELECT * FROM desinations_view where rider_id = {$_SESSION['r_id']} and status != 'cancelled' and status != 'rejected'";
+             $sqlb = "SELECT * FROM desinations_view where rider_id = {$_SESSION['r_id']} ";
              $resultb = $conn->query($sqlb);
            while ($books = $resultb->fetch_assoc()) {
                                             ?>
