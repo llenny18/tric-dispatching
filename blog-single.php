@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>blog single </title>
       <!-- Favicon -->
-      <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+      <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
       <!-- Bootstrap CSS -->
       <link href="assets/css/bootstrap.min.css" rel="stylesheet">
       <!-- Animate CSS -->
