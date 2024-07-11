@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="row wow fadeInUp">
                      <!-- #banner-text start -->
                      <div id="banner-text" class="col-md-12 text-c text-center ">
-                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Login as Rider</h5>
+                        <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s">Login as Passenger</h5>
 
                      </div>
                      <!-- /#banner-text End -->

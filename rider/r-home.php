@@ -40,7 +40,7 @@
                         <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">here are all the Bookings you have now!</p>
                         <div class="top-banner wow fadeInRight">
                         
-                           <a id="#services" href="p-book.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">View My Bookings Schedule</a>
+                           <a id="#services" href="r-list.php" class="btn btn-success  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">View My Bookings Schedule</a>
                         </div>
                      </div>
                      <!-- /#banner-text End -->

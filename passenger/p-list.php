@@ -243,7 +243,7 @@ echo $formattedDate;
 $result = $conn->query($sql);
 $row_p2 = $result->fetch_assoc();
 
-echo $row_p1['location_name']." => ". $row_p2['location_name'];
+echo "<a  target='_blank' style='background-color: green; border-radius: 50px; padding: 5px; margin: 5px;' href='{$row_p1['google_maps']}'>".$row_p1['location_name']."</a> => <a  style='background-color: green; border-radius: 50px; padding: 5px; margin: 5px;' target='_blank' href='{$row_p2['google_maps']}'>". $row_p2['location_name']."</a>";
                     
                     ?></td>
                     <td><?= $books['fare'] ?></td>
