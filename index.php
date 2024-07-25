@@ -15,9 +15,11 @@
    <link href="assets/vendors/animate/animate.css" rel="stylesheet">
    <!-- Icon CSS-->
    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+   <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
    <!-- Owlcarousel CSS-->
    <link rel="stylesheet" type="text/css" href="assets/vendors/owl_carousel/owl.carousel.css" media="all">
    <!--Template Styles CSS-->
+   
    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 </head>

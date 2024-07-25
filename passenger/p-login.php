@@ -102,7 +102,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                            </div>
                            <div class="col-md-12 sm-margin-30px-bottom">
                               <div class="top-contact wow fadeInRight text-left">
-                                 <button type="submit" class="btn btn-primary wow fadeInUp js-scroll-trigger m-5" data-wow-delay="1s">Login</button>
+                                 <button type="submit" class="btn btn-primary wow fadeInUp js-scroll-trigger m-5" data-wow-delay="1s" style=" margin-bottom: 10px;">Login</button>
+                                 <br>
                                  <a href="p-register.php" class="btn btn-primary wow fadeInUp js-scroll-trigger" data-wow-delay="1s">No Account? Register Now!</a>
                               </div>
                            </div>

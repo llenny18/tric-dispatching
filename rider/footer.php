@@ -7,11 +7,7 @@
                      <a class=" logo-biss" href="index.php"> <img src="assets/images/logo_img.png"></a>
                   </div>
                   <p class="footer-h">Discover seamless and convenient transportation with our online tricycle dispatching service! Whether you're running errands or exploring the city, our reliable tricycles are just a click away. Enjoy quick booking, affordable rates, and exceptional service at your fingertips!</p>
-                  <div class="bigpixi-footer-social">
-                     <a href="" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                     <a href="" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                     <a href="" target="_blank"><i id="social-em" class="fa fa-instagram fa-3x social"></i></a>
-                  </div>
+              
                </div>
                <div class="col-md-1 ">
                </div>

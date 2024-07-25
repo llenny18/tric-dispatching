@@ -83,7 +83,7 @@
             <div class="row team_row">
                <div class="col-md-4 col-sm-6 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                   <div class="team_membar">
-                     <img src="assets/images/team/tm-1.jpg" alt="">
+                     <img src="assets/images/tm-1.png" alt="">
                      <div class="team_content">
                         <div class=" float-left  ">
                            <a href="#" class="name">Convenience</a>
@@ -95,7 +95,7 @@
                </div>
                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                   <div class="team_membar">
-                     <img src="assets/images/team/tm-2.jpg" alt="">
+                     <img src="assets/images/tm-2.png" alt="">
                      <div class="team_content">
                         <div class=" float-left  ">
                            <a href="#" class="name">Real-Time Tracking</a>
@@ -107,7 +107,7 @@
                </div>
                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                   <div class="team_membar">
-                     <img src="assets/images/team/tm-3.jpg" alt="">
+                     <img src="assets/images/tm-3.png" alt="">
                      <div class="team_content">
                         <div class=" float-left  ">
                            <a href="#" class="name">Efficiency</a>
@@ -137,7 +137,7 @@
                </div>
                <div class="col-md-5">
                   <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                     <a id="#services" href="contact.php" class="btn btn-primary wow fadeInUp js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
+                     <a id="#services" href="passenger/" class="btn btn-primary wow fadeInUp js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">BOOK NOW!</a>
                   </div>
                </div>
             </div>
