@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2024 at 01:45 AM
+-- Generation Time: Jul 26, 2024 at 03:07 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -82,7 +82,8 @@ INSERT INTO `dispatches` (`dispatch_id`, `passenger_id`, `rider_id`, `origin`, `
 (1, 1, 1, '1', '2', 2.28, 'cancelled', '18:32:00', '2024-06-13', 'Cash', 'paid', 'd5b04cc3dcd8c17702549ebc5f1acf1a.jpg'),
 (2, 1, 1, '1', '2', 91.30, 'pending', '19:48:00', '2024-07-11', 'Gcash', 'unpaid', ''),
 (3, 1, 1, '1', '2', 91.30, 'completed', '20:05:00', '2024-07-17', 'Maya', 'paid', ''),
-(4, 1, 1, '8', '19', 30.26, 'pending', '19:23:00', '2024-07-18', 'Paypal', 'unpaid', '');
+(4, 1, 1, '8', '19', 30.26, 'completed', '19:23:00', '2024-07-18', 'Paypal', 'paid', ''),
+(5, 1, 1, '15', '40', 114.52, 'pending', '08:41:00', '2024-07-02', 'Paypal', 'unpaid', '');
 
 -- --------------------------------------------------------
 
@@ -188,16 +189,17 @@ CREATE TABLE `riders` (
   `name` varchar(250) NOT NULL,
   `address` varchar(250) NOT NULL,
   `email` varchar(250) NOT NULL,
-  `contact` varchar(250) NOT NULL
+  `contact` varchar(250) NOT NULL,
+  `status` enum('available','not available') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `riders`
 --
 
-INSERT INTO `riders` (`rider_id`, `vehicle_number`, `license_number`, `license_issued_date`, `license_expiry_date`, `rusername`, `rpassword`, `name`, `address`, `email`, `contact`) VALUES
-(1, 'gdfgfd', 'gfgfdgdf', '2024-06-03', '2024-06-29', 'rider1', 'riderpass', 'rider name', 'rider1', 'email@rider.com', '0943242342'),
-(2, 'sdfsdf', 'sdfsdf', '2024-05-31', '2024-05-29', 'sdfsd', 'sfsfdfs', 'sdfs', 'fsdf', 'sdgfsgdfhnhgfh@email.com', 'sdfsdf');
+INSERT INTO `riders` (`rider_id`, `vehicle_number`, `license_number`, `license_issued_date`, `license_expiry_date`, `rusername`, `rpassword`, `name`, `address`, `email`, `contact`, `status`) VALUES
+(1, 'gdfgfd', 'gfgfdgdf', '2024-06-03', '2024-06-29', 'rider1', 'riderpass', 'Rider marawoy', 'rider1', 'email@rider.com', '0943242342', 'available'),
+(2, 'sdfsdf', 'sdfsdf', '2024-05-31', '2024-05-29', 'sdfsd', 'sfsfdfs', 'Rider Name2', 'fsdf', 'sdgfsgdfhnhgfh@email.com', 'sdfsdf', 'available');
 
 -- --------------------------------------------------------
 
@@ -244,7 +246,7 @@ ALTER TABLE `riders`
 -- AUTO_INCREMENT for table `dispatches`
 --
 ALTER TABLE `dispatches`
-  MODIFY `dispatch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `dispatch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `dispatch_locations`
