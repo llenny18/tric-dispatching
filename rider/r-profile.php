@@ -30,12 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
     // Prepare SQL statement
     $sql = "UPDATE riders 
-            SET name=?, rusername=?, address=?,rpassword=?, contact=?, email=?, vehicle_number=?, license_number=?, license_issued_date=?, license_expiry_date=?
+            SET name=?, rusername=?, address=?,rpassword=?, contact=?, email=?, vehicle_number=?, license_number=?, license_issued_date=?, license_expiry_date=?, status =?
             WHERE rusername=?";
 
     // Prepare and bind parameters
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssssssss", $name,$uname, $address, $rpassword, $contact, $email, $vehicle_number, $license_number, $license_issued_date, $license_expiry_date, $rusername);
+    $stmt->bind_param("ssssssssssss", $name,$uname, $address, $rpassword, $contact, $email, $vehicle_number, $license_number, $license_issued_date, $license_expiry_date, $status, $rusername);
 
     // Set parameters from POST data
     $name = $_POST['name'];
@@ -49,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $license_number = $_POST['lc'];
     $license_issued_date = $_POST['lv'];
     $license_expiry_date = $_POST['lv2'];
+    $status = $_POST['status'];
 
     // Execute the prepared statement
     if ($stmt->execute()) {
@@ -137,6 +138,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <label for="lv2">License Issue Expiry</label>
                                 <input type="date" class="medium-input" maxlength="70" placeholder="License Issue Expiry" required="required" id="lv2" name="lv2" value="<?=$row_r['license_expiry_date'] ?>">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <label for="lv2">Availability Status</label>
+                                <select name="status" id="">
+<option value="available" <?php if($row_r['status'] == 'available'){ echo " selected "; } ?>>Available</option>
+<option value="not available" <?php if($row_r['status'] == 'not available'){ echo " selected "; } ?>>Not Available</option>
+
+                                </select>
                             </div>
                             
                             <div class="col-md-12 sm-margin-30px-bottom">

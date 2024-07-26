@@ -51,8 +51,10 @@
                <?php
 
 if(!isset($_SESSION["r_id"]) ){
+   if (basename($_SERVER['REQUEST_URI']) != "r-register.php") {
    if($_SERVER['REQUEST_URI'] != "/tric-dispatching/rider/r-login.php"){
    echo '<script>alert("Login First! Redirecting to Login page ."); window.location.href = "r-login.php";</script>';}
+   }
 }
 else{
    $sql = "SELECT * FROM riders where rider_id = {$_SESSION["r_id"]}";

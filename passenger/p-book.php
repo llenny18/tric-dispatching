@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <select class="medium-textarea" rows="12" maxlength="1000" required="required" id="rider" name="rider">
                                             <option value="">Select Rider</option>
                                             <?php
-                                            $sqlr = "SELECT * FROM riders ";
+                                            $sqlr = "SELECT * FROM riders where status='available' ";
                                             $resultrider = $conn->query($sqlr);
                                             while ($riders = $resultrider->fetch_assoc()) {
                                             ?>

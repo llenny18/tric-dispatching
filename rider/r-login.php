@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                               <input type="text" class="medium-input" maxlength="70" placeholder="Username" required="required" id="email" name="email">
                            </div>
                            <div class="  col-sm-6 col-md-6">
-                              <input type="text" class="medium-input" maxlength="70" placeholder="Password" required="required" id="subject" name="subject">
+                              <input type="password" class="medium-input" maxlength="70" placeholder="Password" required="required" id="subject" name="subject">
                            </div>
                           
                            <div class="col-md-12 sm-margin-30px-bottom">
